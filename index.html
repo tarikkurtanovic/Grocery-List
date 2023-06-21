@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <head>
+    <title>Grocery List</title>
+  
+  </head>
+  <body>
+
+    <h2>Grocery List</h2>
+    
+    <div>
+      <label for="budget">Enter Budget Amount:</label>
+      <input type="number" id="budget" />
+      <button onclick="calculateBudget()">Calculate</button>
+    </div>
+
+    <div id="topContainer">
+      <h3>Add Item</h3>
+      <div>
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" />
+        <span id="itemNameError" class="error"></span>
+      </div>
+
+
+      <div>
+        <label for="itemQuantity">Item Quantity:</label>
+        <input type="number" id="itemQuantity" value="1" />
+      </div>
+
+      <div>
+        <label for="itemPrice">Item Price:</label>
+        <input type="number" id="itemPrice" step="0.01" />
+      </div>
+      <button onclick="addItem()">Submit</button>
+      <div id="successMessage" class="success"></div>
+    </div>
+    <div id="listContainer">
+      <h3>Items List</h3>
+      <ul id="groceryList"></ul>
+      <button onclick="clearAll()">Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
